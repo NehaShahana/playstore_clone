@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "playstore",
+      debugShowCheckedModeBanner: false,
       home: home_screen(),
     );
   }
