@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:playstore_application/screens/apps.dart';
-import 'package:playstore_application/screens/books.dart';
+import 'package:playstore_application/screens/appscreen.dart/apps.dart';
+import 'package:playstore_application/screens/bookscreen.dart/books.dart';
 
 import 'package:playstore_application/screens/gamesscreen.dart';
 
