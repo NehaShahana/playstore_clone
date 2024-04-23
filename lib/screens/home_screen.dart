@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:playstore_application/screens/appscreen.dart/apps.dart';
 import 'package:playstore_application/screens/bookscreen.dart/books.dart';
 
-import 'package:playstore_application/screens/gamesscreen.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/gamesscreen.dart';
 
-import 'package:playstore_application/screens/offer.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/offer.dart';
+import 'package:playstore_application/widgets/offerwid.dart/offegame.dart';
 
 class home_screen extends StatefulWidget {
   const home_screen({super.key});
@@ -19,8 +20,8 @@ class _home_screenState extends State<home_screen> {
   List<Widget> screen = [
     const gamesscreen(),
     const apps(),
-    const offer(),
-    const books(),
+    const Offergame(),
+    const books()
   ];
 
   @override

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_application/screens/appscreen.dart/appforeyou.dart';
 
-import 'package:playstore_application/screens/Foreyou.dart';
-import 'package:playstore_application/screens/Topcharts.dart';
-import 'package:playstore_application/screens/categories.dart';
-import 'package:playstore_application/screens/kids.dart';
+import 'package:playstore_application/widgets/game.dart/CarouseSlider.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/Topcharts.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/categories.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/kids.dart';
 
 class apps extends StatefulWidget {
   const apps({super.key});
@@ -22,7 +23,7 @@ class _appsState extends State<apps> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: const TabBar(
@@ -37,7 +38,7 @@ class _appsState extends State<apps> {
         ),
         body: const TabBarView(
           children: [
-            Foreyou(),
+            appscreen(),
             topchart(),
             kids(),
             categories(),

@@ -1,17 +1,12 @@
-import 'dart:ffi';
+// ignore_for_file: must_be_immutable
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:playstore_application/models/game.dart';
 
-class Foreyou extends StatefulWidget {
-  const Foreyou({super.key});
-
-  @override
-  State<Foreyou> createState() => _ForeyouState();
-}
-
-class _ForeyouState extends State<Foreyou> {
+class Offerswid extends StatelessWidget {
+  Offerswid({super.key});
   List<Gameforyoumodel> imgList = [
     Gameforyoumodel(
         imageurl:
@@ -21,15 +16,19 @@ class _ForeyouState extends State<Foreyou> {
         caption: "new update available.update available",
         subimg:
             "https://img.freepik.com/free-vector/video-game-elements-collection_23-2150269111.jpg?size=626&ext=jpg&ga=GA1.1.1340534115.1711087383&semt=ais",
-        subcaption: "Paw petrol"),
+        subcaption: "Paw patro.. ",
+        subcap: "Badge  ",
+        star: "3.5 "),
     Gameforyoumodel(
         imageurl:
             "https://st3.depositphotos.com/13194036/37187/i/450/depositphotos_371874436-stock-photo-kyiv-ukraine-june-2019-professional.jpg",
         maintitle: "FOOTBALL GAME",
-        caption: "New update available.Update available",
+        caption: "New update avail",
         subimg:
             "https://img.freepik.com/free-vector/video-game-elements-collection_23-2150269111.jpg?size=626&ext=jpg&ga=GA1.1.1340534115.1711087383&semt=ais",
-        subcaption: "Raw petro...")
+        subcaption: "Raw petro...",
+        subcap: "game",
+        star: "4.5")
   ];
 
   @override
@@ -70,7 +69,8 @@ class _ForeyouState extends State<Foreyou> {
                                   child: Text(
                                     item.maintitle,
                                     style: const TextStyle(
-                                        color: Color.fromARGB(255, 19, 16, 16),
+                                        color:
+                                            Color.fromARGB(255, 142, 134, 134),
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -83,23 +83,53 @@ class _ForeyouState extends State<Foreyou> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ListTile(
-                              leading: Row(
-                                children: [
-                                  Image.network(
-                                    width: 30,
-                                    item.subimg,
-                                  ),
-                                  Text(item.subcaption),
-                                ],
-                              ),
+                              padding: const EdgeInsets.all(8.0),
+                              child: ListTile(
+                                leading: Container(
+                                    height: 60,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(12),
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                              item.subimg,
+                                            ),
+                                            fit: BoxFit.fill))),
+                                title: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            item.subcaption,
+                                            style:
+                                                const TextStyle(fontSize: 10),
+                                          ),
+                                          Text(item.subcap,
+                                              style: const TextStyle(
+                                                  fontSize: 10)),
+                                          Text(item.star,
+                                              style:
+                                                  const TextStyle(fontSize: 10))
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                trailing: ElevatedButton(
+                                  onPressed: () {},
+                                  child: const Text("install"),
 
-                              // title: Text(item.subcaption)
+                                  // title: Text(item.subcaption)
 
-                              //   title: Center(child: Text(item.maintitle)),
-                            ),
-                          )
+                                  //   title: Center(child: Text(item.maintitle)),
+                                ),
+                              ))
                         ],
                       ),
                     ),

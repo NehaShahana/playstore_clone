@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_application/screens/Foreyou.dart';
-import 'package:playstore_application/screens/Topcharts.dart';
-import 'package:playstore_application/screens/categories.dart';
-import 'package:playstore_application/screens/kids.dart';
-import 'package:playstore_application/screens/premium.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/foryouscreen.dart';
+import 'package:playstore_application/widgets/game.dart/CarouseSlider.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/Topcharts.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/categories.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/kids.dart';
+import 'package:playstore_application/screens/gamehomesc.dart/premium.dart';
 
 class gamesscreen extends StatefulWidget {
   const gamesscreen({super.key});
@@ -37,13 +38,13 @@ class _gamesscreenState extends State<gamesscreen> {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            Foreyou(),
-            topchart(),
-            kids(),
-            premium(),
-            categories(),
+            foreyoyscreen(),
+            const topchart(),
+            const kids(),
+            const premium(),
+            const categories(),
           ],
         ),
       ),
